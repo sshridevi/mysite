@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>mysite</display-name>
+	<servlet>
+		<servlet-name>GetEMailAddressDtlsServlet</servlet-name>
+		<servlet-class>assign.servlets.GetEMailAddressDtlsServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>GetAllEMailListServlet</servlet-name>
+		<servlet-class>assign.servlets.GetAllEMailListServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddEmailAddressServlet</servlet-name>
+		<servlet-class>assign.servlets.AddEMailAddressServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>GetEMailAddressDtlsForUpdateServlet</servlet-name>
+		<servlet-class>assign.servlets.GetEMailAddressDtlsForUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<description>
+		</description>
+		<display-name>GetEmailAddresswithAjax
+		</display-name>
+		<servlet-name>GetEmailAddresswithAjax</servlet-name>
+		<servlet-class>assign.servlets.GetEmailAddresswithAjax
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetEMailAddressDtlsServlet</servlet-name>
+		<url-pattern>/servlet/emailaddressdtls</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AddEmailAddressServlet</servlet-name>
+		<url-pattern>/servlet/addemailaddress</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetAllEMailListServlet</servlet-name>
+		<url-pattern>/servlet/viewall</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetEmailAddresswithAjax</servlet-name>
+		<url-pattern>/getemailaddresswithAjax</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>GetEMailAddressDtlsForUpdateServlet</servlet-name>
+		<url-pattern>/servlet/getemailinfoforupdate</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

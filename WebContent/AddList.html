@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Add List</title>
+	</head>
+<body bgcolor="#ffffee">
+	<h1>Add List</h1>
+
+	<tr>
+	<td>
+		<lable for="group">Group</lable>
+	</td>
+		
+	<td>
+		<select name="group" id="group">	
+			<option>Friends
+			<option>Personal
+			<option>Relatives
+		</select>		
+	</td>
+	</tr>
+	<tr class="top">
+	<td><br>To add a new contact to this list, choose a contact from "My Contacts," or enter a new contact. Then click "Add."</td>
+	</tr>
+		<tr>
+		<td>
+		<table cellpadding=4 cellspacing=0 border=0>
+		<tr>
+			<td colspan=2><strong>My Contacts</strong></td>
+			<td><strong>List Members</strong></td>
+		</tr>
+		<tr>
+			<td align=left width=325>
+			<script>
+						function ClearMe( inputElem )
+						{
+							if ( inputElem.getAttribute("_init") == 1 )
+							{
+								inputElem.setAttribute("_init",0);
+								inputElem.value = "";
+							}
+						}
+			</script>
+<input style="width:325px;" type="text" name="ac_entries" id="ac_entries" value="enter name or email address" _init=1 onclick="ClearMe(this);" onfocus="ClearMe(this);">
+<p>
+<select multiple=multiple name="ac_selections" id="ac_selections" size=15 style="width:325px;"></select>
+					</td>
+					<td valign="top" align=center width=100> &nbsp;<p>
+<button class="btn" style="float: none; font-size: 0.84em;" onclick="AddToRHS(true,true);return false;">Add >></button>
+						<br><br>
+					</td>
+					<td width=325 valign=top>
+						<select multiple=multiple id=Rem name=Rem size=17 style="width:325px;"></select>
+						<script>
+						var lhsSelect = document.getElementById("ac_selections");
+						lhsSelect.onkeypress = HandleSelectOptionKeyPress;
+
+						ArrayToOptions( );
+						</script>
+					</td>
+				</tr>
+					
+				
+				</tr>
+				</table>
+				</td>
+			</tr>
+		</table>
+
+
+
+		
+	</td>
+</tr>
+</table>
+
+<div class="globalbuttonbar">
+<span class="first">
+
+	<button type="button" id="buttonsave1" value="Add List">Add List</button>
+
+	<button type="button" id="buttoncancel1" value="Cancel">Cancel</button>
+
+</span>
+</div>
+
+
+
+</html>
